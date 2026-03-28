@@ -49,7 +49,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Brian Williams | About Page</title>
+        <title>Pongsapak | About Page</title>
         <meta name="description" content="any description" />
       </Head>
 

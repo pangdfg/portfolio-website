@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
@@ -156,6 +157,11 @@ export default function Projects() {
 
   return (
     <>
+      <Head>
+        <title>Github Repositories</title>
+        <meta name="description" content="any description" />
+      </Head>
+
       <TransitionEffect />
 
       <main className="min-h-screen flex flex-col bg-gray-950 text-white">

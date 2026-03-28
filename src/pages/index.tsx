@@ -7,7 +7,7 @@ import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 import { LinkArrow } from "@/components/Icons";
 
-import profilePic from "../../public/1637416228103.png";
+import profilePic from "../../public/20251206_144537.jpg";
 
 export default function Home() {
   return (
