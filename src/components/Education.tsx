@@ -2,16 +2,19 @@ import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 import { educations, EducationItem } from "../data/education";
+import Link from "next/link";
+import { LinkArrow } from "@/components/Icons";
+
 
 type DetailsProps = EducationItem;
 
-const Details = ({ type, time, place, info }: DetailsProps) => {
+const Details = ({ type, time, place, info, web }: DetailsProps) => {
   const ref = useRef<HTMLLIElement | null>(null);
 
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
+      className="my-12 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col justify-between md:w-[80%]"
     >
       <LiIcon reference={ref} />
 
@@ -20,15 +23,28 @@ const Details = ({ type, time, place, info }: DetailsProps) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+        <h3 className="capitalize font-bold sm:text-3xl xs:text-lg text-amber-100">
           {type}
         </h3>
 
-        <span className="capitalize font-medium text-amber-50/75  xs:text-sm">
+        <span className="capitalize text-l font-medium text-blue-100  xs:text-sm">
           {time} | {place}
         </span>
 
-        <p className="font-medium w-full md:text-sm">{info}</p>
+        <p className="font-medium w-full md:text-sm p-3">{info}</p>
+
+        <Link
+          href={web}
+          target="_blank"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium 
+          bg-gray-50 text-gray-950 rounded-md
+          hover:bg-gray-950 hover:text-gray-50 
+          border border-transparent hover:border-amber-50
+          transition-all duration-200"
+        >
+          View
+          <LinkArrow className="w-4" />
+        </Link>
       </motion.div>
     </li>
   );
@@ -44,7 +60,7 @@ const Education = () => {
 
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 text-amber-200">
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 text-amber-200 md:underline">
         Education
       </h2>
 

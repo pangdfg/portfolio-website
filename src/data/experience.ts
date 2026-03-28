@@ -9,30 +9,25 @@ export type ExperienceItem = {
 
 export const experiences: ExperienceItem[] = [
   {
-    position: "Frontend Developer",
-    company: "RikerWeb",
+    position: "Conscripted into the military",
+    company: "Thai Army",
     companyLink: "/",
-    time: "2024-Present",
-    address: "Colorado Springs, CO",
+    time: "2025",
+    address: "Chiang Mai",
     work: [
-      "Specialize in full-stack web development using HTML/CSS, JavaScript, and Tailwind CSS",
-      "Follow design mockups and wireframes for precise implementation",
-      "Collaborate closely with backend developers for seamless integration",
-      "Leverage Tailwind CSS utilities to create custom layouts and styles",
-      "Delivered projects for various industries, increasing online leads by 25%",
+      "Sticking in the military for 6 months and successfully",
+      "Leveraging the Microsoft Office suite to drive productivity and streamline workflows."
     ],
   },
   {
-    position: "Web Developer",
-    company: "Coding For Hermit Crabs",
+    position: "Information System Development Department Intern ",
+    company: "SME D Bank",
     companyLink: "/",
     time: "2023",
-    address: "Atlanta, GA",
+    address: "Phaya Thai District, Bangkok",
     work: [
-      "Developed and maintained websites",
-      "Optimized mobile responsiveness",
-      "Implemented SEO best practices",
-      "Collaborated with clients",
+      "Architected and optimized SQL queries, stored procedures, and scalar functions within Microsoft SQL Server Management Studio (SSMS).",
+      "Transferred data from Excel to SQL Server, performing data validation to ensure accuracy and consistency for downstream processes.",
     ],
   },
 ];

@@ -18,7 +18,7 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
+      className="my-12 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col  justify-between md:w-[80%]"
     >
       <LiIcon reference={ref} />
         <motion.div
@@ -27,7 +27,7 @@ const Details = ({
         transition={{ duration: 0.5, type: "spring" }}
       >
       
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+        <h3 className="capitalize font-bold t sm:text-3xl xs:text-lg text-amber-100">
           {position}&nbsp;
           <a
             href={companyLink}
@@ -39,7 +39,7 @@ const Details = ({
           </a>
         </h3>
 
-        <span className="capitalize font-medium text-amber-50/75  xs:text-sm">
+        <span className="capitalize font-medium text-blue-100  xs:text-m">
           {time} | {address}
         </span>
 
@@ -63,8 +63,8 @@ const Experience = () => {
   });
 
   return (
-    <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 text-amber-200">
+    <div className="my-20">
+      <h2 className="my-20 font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 text-amber-200 md:underline">
         Experience
       </h2>
 

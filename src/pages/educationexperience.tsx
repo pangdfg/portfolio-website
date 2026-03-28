@@ -23,6 +23,7 @@ const About = () => {
         <Layout className="flex-1 pt-5">
           
           <Experience />
+          
           <Education />
 
         </Layout>

@@ -10,14 +10,14 @@ export const skillData: SkillCategory[] = [
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express", "Java", "Spring Boot"],
+    skills: ["Node.js", "Express", "Java", "Spring Boot", "golang", "fiber", "gin"],
   },
   {
     title: "Database",
-    skills: ["MySQL", "MongoDB", "PostgreSQL"],
+    skills: ["MySQL", "MongoDB", "PostgreSQL", "MySQL Server"],
   },
   {
     title: "DevOps & Tools",
-    skills: ["Docker", "Git", "Linux", "Nginx"],
+    skills: ["Docker", "Git", "Nginx" , "Vscode", "MSoffice"],
   },
 ];

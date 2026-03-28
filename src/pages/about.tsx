@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
+import { getGithubUser } from "@/data/api/github";
 
 /* ================= TYPES ================= */
 
@@ -59,58 +60,49 @@ const About = () => {
         <Layout className="flex-1 pt-16">
           
           <AnimatedText
-            text="Curiosity Leads Creativity!"
+            text="Every Failure is a Step to Success"
             className="mb-16 lg:text-7xl sm:text-6xl xs:!text-4xl sm:mb-8"
           />
 
           {/* GRID */}
-          <div className="w-full grid-cols-8 gap-16 sm:gap-8">
+          <div className="w-full grid grid-cols-[2fr_1fr] gap-16 sm:gap-8">
 
             {/* LEFT */}
-            <div className="col-span-3 flex flex-col items-start xl:col-span-4 md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-gray-100">
+            <div className="flex flex-col items-start">
+              <h2 className="mb-4 text-3xl font-bold uppercase text-amber-100 underline">
                 About Me
               </h2>
 
-              <p className="font-medium">
-                Hello! My name is Brian, I am a web developer and UI/UX designer
-                with a passion for creating beautiful, functional, and
-                user-centered digital experiences.
+              <p className="font-medium text-xl text-blue-50">
+                Hello! My name is Pongsapak. 
+                I am deeply passionate about software engineering with a particular focus on database management and backend development.
               </p>
 
               <p className="my-4 font-medium">
-                I believe that design is about more than just making things look
-                pretty, it is about solving problems.
+                 While I am currently at the beginning of my professional journey, 
+                 I am a fast learner with a strong drive to grow and contribute.
               </p>
 
               <p className="font-medium">
-                I bring my commitment to design excellence and user-centered
-                thinking to every project I work on.
+                I am eager to bring my dedication to a forward-thinking team and would welcome the opportunity to discuss how I can add value to your organization.
               </p>
             </div>
 
             {/* RIGHT (STATS) */}
-            <div className="col-span-5 flex flex-col justify-between xl:col-span-8 md:mt-8">
+            <div className="flex flex-col items-center justify-center">
 
-              <div className="flex justify-between flex-wrap gap-8">
+              <div className=" flex flex-col justify-between flex-wrap gap-8">
 
-                <div className="flex flex-col items-center">
-                  <span className="text-6xl font-bold">
-                    <AnimatedNumbers value={8} />+
-                  </span>
-                  <p className="text-gray-400 text-sm">Clients</p>
-                </div>
-
-                <div className="flex flex-col items-center">
-                  <span className="text-6xl font-bold">
-                    <AnimatedNumbers value={10} />+
+                <div className=" items-center">
+                  <span className="text-6xl font-bold text-amber-200">
+                    <AnimatedNumbers value={1} />+
                   </span>
                   <p className="text-gray-400 text-sm">Projects</p>
                 </div>
 
-                <div className="flex flex-col items-center">
-                  <span className="text-6xl font-bold">
-                    <AnimatedNumbers value={4} />+
+                <div className=" items-center">
+                  <span className="text-6xl font-bold text-amber-200">
+                    <AnimatedNumbers value={1} />+
                   </span>
                   <p className="text-gray-400 text-sm">Years</p>
                 </div>
