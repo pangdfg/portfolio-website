@@ -27,8 +27,12 @@ const Details = ({ type, time, place, info, web }: DetailsProps) => {
           {type}
         </h3>
 
-        <span className="capitalize text-l font-medium text-blue-100  xs:text-sm">
-          {time} | {place}
+        <h2 className="capitalize text-xl font-medium text-blue-100  xs:text-m">
+          {place}
+        </h2>
+
+        <span className="capitalize text-l font-medium text-emerald-300  xs:text-sm">
+          {time}
         </span>
 
         <p className="font-medium w-full md:text-sm p-3">{info}</p>

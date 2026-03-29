@@ -28,15 +28,10 @@ const Details = ({
       >
       
         <h3 className="capitalize font-bold t sm:text-3xl xs:text-lg text-amber-100">
-          {position}&nbsp;
-          <a
-            href={companyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary capitalize"
-          >
-            @{company}
-          </a>
+          {position}
+        </h3>
+        <h3 className="capitalize font-bold t sm:text-2xl xs:text-lg text-emerald-400">
+            &nbsp;@ {company}
         </h3>
 
         <span className="capitalize font-medium text-blue-100  xs:text-m">

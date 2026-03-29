@@ -61,7 +61,7 @@ const GithubProfile = ({ user }: { user: User }) => {
         </span>
 
         <Link href={user.html_url} target="_blank">
-          <h2 className="my-2 text-4xl font-bold hover:underline">
+          <h2 className="my-2 text-4xl font-bold hover:underline hover:text-amber-200">
             {user.name}
           </h2>
         </Link>
@@ -83,7 +83,7 @@ const GithubProfile = ({ user }: { user: User }) => {
           <Link
             href={user.html_url}
             target="_blank"
-            className="ml-4 rounded-lg bg-white text-black px-6 py-2 font-semibold hover:bg-neutral-950 hover:text-amber-50 hover:border"
+            className="ml-4 rounded-lg bg-white text-black px-6 py-2 font-semibold hover:bg-amber-900 hover:text-amber-50 hover:border"
           >
             View Profile
           </Link>
@@ -115,7 +115,7 @@ const RepoCard = ({ repo }: { repo: Repo }) => {
       <div className="flex justify-between items-center mt-4">
         
         {repo.homepage && (
-          <Link href={repo.homepage} target="_blank" className="underline text-sm">
+          <Link href={repo.homepage} target="_blank" className="underline rounded-lg px-4 py-1.5 bg-white text-black text-sm hover:text-amber-300 hover:bg-black">
             Live
           </Link>
         )}
