@@ -70,13 +70,14 @@ export default function NavBar() {
               className="md:hidden px-4 pb-4 flex flex-col space-y-3 bg-neutral-900"
             >
               {NAV_LINKS.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-300 hover:text-white"
-                >
-                  {link.title}
-                </Link>
+                <DisclosureButton
+        key={link.href}
+        as={Link}
+        href={link.href}
+        className="text-gray-300 hover:text-white text-left"
+      >
+                          {link.title}
+                </DisclosureButton>
               ))}
             </motion.div>
           </DisclosurePanel>

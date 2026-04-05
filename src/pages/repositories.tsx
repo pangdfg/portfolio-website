@@ -113,12 +113,12 @@ const RepoCard = ({ repo }: { repo: Repo }) => {
       <div className="flex  md:flex-row ml-auto mt-4 p-2">
         
         {repo.homepage && (
-          <Link href={repo.homepage} target="_blank" className="underline rounded-lg px-4 py-1.5 text-white text-sm lg:text-base hover:text-amber-300 hover:bg-black">
+          <Link href={repo.homepage} target="_blank" className="underline rounded-lg px-4 text-white text-sm lg:text-base hover:text-amber-300 ">
             Live
           </Link>
         )}
 
-        <Link href={repo.html_url} target="_blank" className="w-5 md:w-6 lg:w-7">
+        <Link href={repo.html_url} target="_blank" className="w-5 md:w-6 lg:w-7 hover:text-amber-300 ml-4">
           <GithubIcon />
         </Link>
       </div>
@@ -179,8 +179,8 @@ export default function Projects() {
                 </div>
 
                 {/* REPO CONTAINER */}
-                <div className="px-6">
-                <div className="grid grid-cols-2 gap-10 lg:grid-cols-2 sm:grid-cols-1 content-evenly">
+                <div className="px-2">
+                <div className="grid  gap-10 md:grid-cols-2 content-evenly">
                     {repos.map((repo) => (
                     <RepoCard key={repo.id} repo={repo} />
                     ))}

@@ -11,7 +11,7 @@ const Footer = () => {
     </span>
     <ul className="flex flex-wrap items-center justify-center md:justify-end mb-6 text-sm sm:mb-0 text-amber-50">
       <li>
-        <a className="me-4 md:me-6">Thank you.</a>
+        <a className="me-4 md:me-6">Created by: </a>
       </li>
       <nav className="flex items-center justify-center flex-wrap gap-6">
           {SOCIAL_LINKS.map(({ href, Icon }) => (
@@ -21,7 +21,7 @@ const Footer = () => {
               target="_blank"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-7 md:w-8 h-7 md:h-8   mr-3  rounded-full"
+              className="w-5 md:w-8 h-5 md:h-8   mr-3  rounded-full"
             >
               <Icon />
             </motion.a>

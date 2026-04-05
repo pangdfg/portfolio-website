@@ -8,6 +8,7 @@ import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 import { LinkArrow } from "@/components/Icons";
 
+
 import profilePic from "../../public/20251206_144537.jpg";
 
 export default function Home() {
@@ -82,7 +83,6 @@ export default function Home() {
                 >
                   Contact
                 </Link>
-
               </div>
             </div>
           </div>
