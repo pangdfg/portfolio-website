@@ -8,7 +8,6 @@ type DetailsProps = ExperienceItem;
 const Details = ({
   position,
   company,
-  companyLink,
   time,
   address,
   work,
@@ -18,7 +17,7 @@ const Details = ({
   return (
     <li
       ref={ref}
-      className="my-12 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col  justify-between md:w-[80%]"
+      className="my-12 first:mt-0 last:mb-0 w-[80%] mx-auto flex flex-col justify-between md:w-[60%] lg:w-[80%]"
     >
       <LiIcon reference={ref} />
         <motion.div
@@ -27,20 +26,22 @@ const Details = ({
         transition={{ duration: 0.5, type: "spring" }}
       >
       
-        <h3 className="capitalize font-bold t sm:text-3xl xs:text-lg text-amber-100">
+        <h3 className="capitalize font-bold text-lg sm:text-2xl md:text-3xl lg:text-4xl text-amber-100">
           {position}
-        </h3>
-        <h3 className="capitalize font-bold t sm:text-2xl xs:text-lg text-emerald-400">
+        </h3> 
+        <h3 className="capitalize font-bold text-md sm:text-xl md:text-2xl lg:text-3xl text-emerald-400">
             &nbsp;@ {company}
         </h3>
 
-        <span className="capitalize font-medium text-blue-100  xs:text-m">
+        <span className="capitalize font-medium text-sm sm:text-md md:text-lg lg:text-xl text-blue-100">
           {time} | {address}
         </span>
 
         <ul className="list-disc list-inside">
           {work.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index} className="text-sm sm:text-md md:text-lg">
+              {item}
+            </li>
           ))}
         </ul>
         </motion.div>
@@ -58,21 +59,21 @@ const Experience = () => {
   });
 
   return (
-    <div className="my-20">
-      <h2 className="my-20 font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16 text-amber-200 md:underline">
+    <div className="">
+      <h2 className="my-20 font-bold llg:text-8xl md:mb-32 w-full text-center md:text-6xl text-4xl mb-16 text-amber-200 md:underline">
         Experience
       </h2>
 
       <div
         ref={ref}
-        className="w-[75%] mx-auto relative lg:w-[90%] md:w-full "
+        className=" mx-auto relative lg:w-[75%] w-full "
       >
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-1 h-full bg-amber-50 origin-top md:w-0.5 md:left-7.5 xs:left-[20px]"
+          className="absolute lg:left-7.5 top-0 w-1 h-full bg-amber-50 origin-top md:left-7.5 left-4.5"
         />
 
-        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+        <ul className="w-full flex flex-col items-start justify-between md:ml-4 ml-2">
           {experiences.map((exp, index) => (
             <Details key={index} {...exp} />
           ))}

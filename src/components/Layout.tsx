@@ -18,7 +18,7 @@ const Layout = ({
 
   return (
     <div
-      className={`w-full min-h-screen bg-neutral-900 p-32 xl:p-24 lg:p-16 md:p-12 sm:p-8 ${className}`}
+      className={`w-full min-h-screen bg-neutral-900 lg:p-32 xl:p-24 md:p-16 p-12 sm:p-8 ${className}`}
     >
       {children}
     </div>

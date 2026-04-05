@@ -61,24 +61,24 @@ const About = () => {
           
           <AnimatedText
             text="Every Failure is a Step to Success"
-            className="mb-16 lg:text-7xl sm:text-6xl xs:!text-4xl sm:mb-8"
+            className="lg:mb-16 lg:text-7xl md:text-6xl text-xl mb-8 mt-15"
           />
 
           {/* GRID */}
-          <div className="w-full grid grid-cols-[2fr_1fr] gap-16 sm:gap-8">
+          <div className="w-full grid lg:grid-cols-[2fr_1fr] lg:gap-16 gap-8">
 
             {/* LEFT */}
             <div className="flex flex-col items-start">
-              <h2 className="mb-4 text-3xl font-bold uppercase text-amber-100 underline">
+              <h2 className="mb-4 text-l lg:text-3xl md:text-xl font-bold uppercase text-amber-100 underline">
                 About Me
               </h2>
 
-              <p className="font-medium text-xl text-blue-50">
+              <p className="font-medium lg:text-xl text-m text-blue-50">
                 Hello! My name is Pongsapak. 
                 I am deeply passionate about software engineering with a particular focus on database management and backend development.
               </p>
 
-              <p className="my-4 font-medium">
+              <p className="my-4 font-medium lg:text-xl text-m">
                  While I am currently at the beginning of my professional journey, 
                  I am a fast learner with a strong drive to grow and contribute.
               </p>

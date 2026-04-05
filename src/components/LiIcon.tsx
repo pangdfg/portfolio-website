@@ -14,7 +14,7 @@ const LiIcon = ({ reference }: LiIconProps) => {
   return (
     <figure className="absolute left-0 stroke-amber-50">
       <svg
-        className="-rotate-90 md:w-15 md:h-15 sm:w-15 sm:h-15 xs:w-[40px] xs:h-[40px]"
+        className="-rotate-90 md:w-15 md:h-15 sm:w-15 sm:h-15 w-10 h-10"
         width="75"
         height="75"
         viewBox="0 0 100 100"

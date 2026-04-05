@@ -20,12 +20,12 @@ export default function Home() {
       <TransitionEffect />
 
       <main className="flex items-center w-full min-h-screen text-amber-50 bg-neutral-900">
-        <Layout className="pt-0 md:p-16 sm:pt-8">
+        <Layout className="pt-50 md:pt-45 lg:pt-32">
 
-          <div className="grid grid-cols-2 items-center justify-between w-full lg:flex-col">
+          <div className="grid lg:grid-cols-2 items-center justify-between w-full lg:flex-col ">
 
             {/* IMAGE */}
-            <div className="w-1/2 md:w-full">
+            <div className="flex flex-col items-center self-center w-full lg:w-auto pb-10 lg:pb-0">
             <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ repeat: Infinity, duration: 4 }}
@@ -35,23 +35,23 @@ export default function Home() {
                 alt="Brian"
                 width={350}
                 height={350}
-                className="rounded-full w-150 h-150 md:w-125 md:h-125 sm:w-105 sm:h-105 shadow-[10px_10px_0px_0px_rgba(255,255,217)]"
+                className="rounded-full w-50 h-50 lg:w-150 lg:h-150 md:w-100 md:h-100 shadow-[10px_10px_0px_0px_rgba(255,255,217)]"
                 priority
               />
               </motion.div>
             </div>
 
             {/* CONTENT */}
-            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
+            <div className=" flex flex-col items-center self-center w-full text-center lg:pl-5">
 
               <AnimatedText
                 text="Taking what is possible tomorrow and creating it today."
-                className="text-5xl text-left 
-                xl:text-4xl lg:text-center md:text-3xl sm:text-2xl"
+                className="lg:text-4xl text-left 
+                xl:text-4xl lg:text-center md:text-2xl text-xl text-amber-200"
               />
 
-              <p className="my-4 text-base font-medium 
-              md:text-sm sm:text-xs max-w-xl">
+              <p className="my-4 lg:text-base font-medium 
+              md:text-sm text-xs max-w-xl">
                 I love making something beautiful and functional with the newest
                 development techniques. I look for challenges in the unknown and
                 the new. Right now, I am practicing with Backend.

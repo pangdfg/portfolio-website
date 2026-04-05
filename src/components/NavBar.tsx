@@ -1,66 +1,24 @@
 "use client";
 
-import { useState } from "react";
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
 import { NAV_LINKS } from "../data/nav";
-import { SOCIAL_LINKS } from "../data/social";
 
-/* ================= TYPES ================= */
+/* ================= LINK ================= */
 
-type CustomLinkProps = {
-  href: string;
-  title: string;
-  className?: string;
-};
-
-
-
-type CustomMobileLinkProps = CustomLinkProps & {
-  toggle: () => void;
-};
-
-/* ================= DESKTOP LINK ================= */
-
-const CustomLink = ({ href, title, className = "" }: CustomLinkProps) => {
+const NavLink = ({ href, title }: { href: string; title: string }) => {
   const pathname = usePathname();
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className="relative group px-3 py-2 text-sm">
       {title}
       <span
-        className={`h-px inline-block bg-amber-50 absolute left-0 -bottom-0.5 
-        group-hover:w-full transition-[width] duration-300 ease
-        ${pathname === href ? "w-full" : "w-0"}`}
-      />
-    </Link>
-  );
-};
-
-/* ================= MOBILE LINK ================= */
-
-const CustomMobileLink = ({
-  href,
-  title,
-  className = "",
-  toggle,
-}: CustomMobileLinkProps) => {
-  const pathname = usePathname();
-
-  return (
-    <Link
-      href={href}
-      onClick={toggle}
-      className={`${className} relative group text-gray-50 my-2`}
-    >
-      {title}
-      <span
-        className={`h-px inline-block bg-amber-50 absolute left-0 -bottom-0.5 
-        group-hover:w-full transition-[width] duration-300 ease
-        ${pathname === href ? "w-full" : "w-0"}`}
+        className={`absolute left-0 -bottom-0.5 h-0.5 bg-amber-400 transition-all duration-300
+        ${pathname === href ? "w-full" : "w-0 group-hover:w-full"}`}
       />
     </Link>
   );
@@ -68,97 +26,62 @@ const CustomMobileLink = ({
 
 /* ================= NAVBAR ================= */
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () =>{
-    setIsOpen(!isOpen)
-  }
-
+export default function NavBar() {
   return (
-    <header
-      className="w-full px-32 py-8 flex items-center justify-between z-100
-      lg:px-16 md:px-12 sm:px-8 fixed top-0 border-default bg-neutral-900"
+    <Disclosure
+      as="nav"
+      className="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md border-b border-white/10"
     >
-      {/* MOBILE BUTTON */}
-      <button
-        className="flex-col justify-center items-center hidden lg:flex"
-        onClick={handleClick}
-      >
-        <span
-          className={`bg-gray-900 h-0.5 w-6 rounded-sm transition-all 
-          ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
-        />
-        <span
-          className={`bg-gray-900 h-0.5 w-6 my-0.5 rounded-sm transition-all 
-          ${isOpen ? "opacity-0" : "opacity-100"}`}
-        />
-        <span
-          className={`bg-gray-900 h-0.5 w-6 rounded-sm transition-all 
-          ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
-        />
-      </button>
+      {({ open }) => (
+        <>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="flex h-16 items-center justify-between">
 
-      {/* DESKTOP */}
-      <div className="w-full flex justify-between items-center ">
-        <nav>
-          {NAV_LINKS.map((link) => (
-            <CustomLink key={link.href} {...link} className="mx-4 text-amber-50"  />
-          ))}
-        </nav>
+              {/* LOGO */}
+              <div className="text-amber-400 font-bold text-lg">
+                Pongsapak Suwandee
+              </div>
 
-        <nav className="flex items-center justify-center flex-wrap gap-6">
-          {SOCIAL_LINKS.map(({ href, Icon }) => (
-            <motion.a
-              key={href}
-              href={href}
-              target="_blank"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6  mr-3 bg-amber-50 rounded-full"
+              {/* DESKTOP */}
+              <div className="hidden md:flex space-x-6 text-gray-300 hover:text-white">
+                {NAV_LINKS.map((link) => (
+                  <NavLink key={link.href} {...link} />
+                ))}
+              </div>
+
+              {/* MOBILE BUTTON */}
+              <div className="md:hidden">
+                <DisclosureButton className="p-2 text-gray-300 hover:text-white">
+                  {open ? (
+                    <XMarkIcon className="w-6 h-6" />
+                  ) : (
+                    <Bars3Icon className="w-6 h-6" />
+                  )}
+                </DisclosureButton>
+              </div>
+            </div>
+          </div>
+
+          {/* MOBILE MENU */}
+          <DisclosurePanel>
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="md:hidden px-4 pb-4 flex flex-col space-y-3 bg-neutral-900"
             >
-              <Icon />
-            </motion.a>
-          ))}
-        </nav>
-      </div>
-
-      {/* MOBILE MENU */}
-      {isOpen && (
-        <motion.div
-          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
-          animate={{ scale: 1, opacity: 1, x: "-50%", y: "-50%" }}
-          className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          w-[70vw] flex flex-col items-center justify-between
-          bg-neutral-800/90 rounded-lg backdrop-blur-md py-32 z-30"
-        >
-          <nav className="flex flex-col items-center text-amber-50">
-            {NAV_LINKS.map((link) => (
-              <CustomMobileLink
-                key={link.href}
-                {...link}
-                toggle={handleClick}
-              />
-            ))}
-          </nav>
-
-          <nav className="flex items-center mt-4">
-            {SOCIAL_LINKS.map(({ href, Icon }) => (
-              <motion.a
-                key={href}
-                href={href}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-                className="w-6 mx-3 bg-amber-50"
-              >
-                <Icon />
-              </motion.a>
-            ))}
-          </nav>
-        </motion.div>
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-300 hover:text-white"
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </motion.div>
+          </DisclosurePanel>
+        </>
       )}
-    </header>
+    </Disclosure>
   );
-};
-
-export default NavBar;
+}
