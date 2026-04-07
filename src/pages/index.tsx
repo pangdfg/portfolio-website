@@ -36,7 +36,7 @@ export default function Home() {
                 alt="Brian"
                 width={350}
                 height={350}
-                className="rounded-full w-50 h-50 lg:w-150 lg:h-150 md:w-100 md:h-100 shadow-[10px_10px_0px_0px_rgba(255,255,217)]"
+                className="rounded-full w-50 h-50 lg:w-150 lg:h-150 md:w-100 md:h-100 "
                 priority
               />
               </motion.div>

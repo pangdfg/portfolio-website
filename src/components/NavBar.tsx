@@ -30,7 +30,7 @@ export default function NavBar() {
   return (
     <Disclosure
       as="nav"
-      className="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md border-b border-white/10"
+      className="fixed top-0 w-full z-50 bg-neutral-900/80 backdrop-blur-md "
     >
       {({ open }) => (
         <>
@@ -39,7 +39,7 @@ export default function NavBar() {
 
               {/* LOGO */}
               <div className="text-amber-400 font-bold text-lg">
-                Pongsapak Suwandee
+                Pongsapak
               </div>
 
               {/* DESKTOP */}

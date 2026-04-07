@@ -11,7 +11,7 @@ const Footer = () => {
     </span>
     <ul className="flex flex-wrap items-center justify-center md:justify-end mb-6 text-sm sm:mb-0 text-amber-50">
       <li>
-        <a className="me-4 md:me-6">Created by: </a>
+        <a className="me-4 md:me-6">social : </a>
       </li>
       <nav className="flex items-center justify-center flex-wrap gap-6">
           {SOCIAL_LINKS.map(({ href, Icon }) => (

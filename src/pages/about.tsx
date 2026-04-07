@@ -61,7 +61,7 @@ const About = () => {
           
           <AnimatedText
             text="Every Failure is a Step to Success"
-            className="lg:mb-16 lg:text-7xl md:text-6xl text-xl mb-8 mt-15"
+            className="lg:mb-16 lg:text-7xl md:text-6xl text-xl mb-8 mt-15 text-blue-100 underline"
           />
 
           {/* GRID */}
