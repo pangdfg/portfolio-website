@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+This is a personal portfolio website built using [Next.js](https://nextjs.org), showcasing projects, skills, and experiences.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Dynamic Content**: Displays education, experience, skills, and projects dynamically.
+- **Responsive Design**: Optimized for all screen sizes.
+- **Modern UI**: Styled with Tailwind CSS for a sleek and modern look.
+- **GitHub Integration**: Fetches repositories dynamically using the GitHub API.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## View Website
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [https://portfolio-website-xi-two-51.vercel.app/](https://portfolio-website-xi-two-51.vercel.app/) to view the website.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- **`src/components`**: Reusable React components (e.g., NavBar, Footer, Skills).
+- **`src/data`**: Static data for education, experience, skills, and social links.
+- **`src/pages`**: Next.js pages (e.g., Home, About, Contact).
+- **`src/lib`**: Utility functions.
+- **`public/`**: Static assets like images and icons.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is deployed on [Vercel](https://vercel.com). To deploy your own version:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push your code to a GitHub repository.
+2. Connect the repository to Vercel.
+3. Follow the deployment instructions on Vercel.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! To contribute:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
