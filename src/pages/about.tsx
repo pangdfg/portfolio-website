@@ -7,7 +7,6 @@ import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
-import { getGithubUser } from "@/data/api/github";
 
 /* ================= TYPES ================= */
 

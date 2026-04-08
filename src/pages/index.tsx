@@ -46,7 +46,7 @@ export default function Home() {
             <div className=" flex flex-col items-center self-center w-full text-center lg:pl-5">
 
               <AnimatedText
-                text="Taking what is possible tomorrow and creating it today."
+                text="Welcome to my side of the web."
                 className="lg:text-4xl text-left 
                 xl:text-4xl lg:text-center md:text-2xl text-xl text-amber-200"
               />
@@ -78,7 +78,7 @@ export default function Home() {
 
                 {/* CONTACT */}
                 <Link
-                  href="mailto:pongsapak.suwa@gmail.com"
+                  href="/contact"
                   className="text-sm font-medium underline"
                 >
                   Contact

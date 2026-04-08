@@ -3,4 +3,5 @@ export const NAV_LINKS = [
   { href: "/about", title: "About" },
   { href: "/repositories", title: "Repositories" },
   { href: "/educationexperience", title: "Education&Experience" },
+  { href: "/contact", title: "Contact"}
 ];
