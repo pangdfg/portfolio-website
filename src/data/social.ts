@@ -6,7 +6,7 @@ export const SOCIAL_LINKS = [
     Icon: GithubIcon,
   },
   {
-    href: "https://www.linkedin.com/in/pongsapak-suwandee-a432a2309/",
+    href: "https://www.linkedin.com/in/pongsapak-suwandee/",
     Icon: LinkedInIcon,
   },
 ];
